@@ -14,17 +14,17 @@
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/demodev-lab/context-engineering/main/install.sh | bash
-claude -p /init
-npx rules-converter claude
+claude /init
 ```
 
 **Windows PowerShell:**
 
 ```powershell
 iwr -useb https://raw.githubusercontent.com/demodev-lab/context-engineering/main/install.ps1 | iex
-claude -p /init
-npx rules-converter claude
+claude /init
 ```
+
+Claude Code 상에서 `!`를 눌러 쉘 모드에 진입하고 `npx rules-converter claude` 명령어를 실행해주세요.
 
 ### 수동 설치
 
