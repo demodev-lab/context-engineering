@@ -22,32 +22,18 @@ echo "📦 최신 설정 파일들을 다운로드합니다..."
 
 echo "  ⬇️  .cursor 다운로드 중..."
 git clone https://github.com/demodev-lab/.cursor --quiet
-rm -rf .cursor/.git
+/bin/rm -rf .cursor/.git
 echo "  ✓ .cursor 설치 완료"
 
 echo "  ⬇️  .claude 다운로드 중..."
 git clone https://github.com/demodev-lab/.claude --quiet
-rm -rf .claude/.git
+/bin/rm -rf .claude/.git
 echo "  ✓ .claude 설치 완료"
 
 echo "  ⬇️  PRPs 다운로드 중..."
 git clone https://github.com/demodev-lab/PRPs --quiet
-rm -rf PRPs/.git
+/bin/rm -rf PRPs/.git
 echo "  ✓ PRPs 설치 완료"
-
-# Claude 초기화 및 변환
-echo "🔧 설정을 초기화합니다..."
-if command -v claude >/dev/null 2>&1; then
-    claude -p /init && echo "  ✓ Claude 초기화 완료"
-else
-    echo "  ⚠️  claude 명령어를 찾을 수 없습니다. 수동으로 실행해주세요: claude -p /init"
-fi
-
-if command -v npx >/dev/null 2>&1; then
-    npx rules-converter claude && echo "  ✓ 규칙 변환 완료"
-else
-    echo "  ⚠️  npx 명령어를 찾을 수 없습니다. Node.js를 설치해주세요."
-fi
 
 echo ""
 echo "🎉 Context Engineering 설치가 완료되었습니다!"

@@ -8,18 +8,22 @@
 
 ## 설치하기
 
-### 원라이너 설치
+### 스크립트로 설치하기
 
 **macOS/Linux:**
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/demodev-lab/context-engineering/main/install.sh | bash
+claude -p /init
+npx rules-converter claude
 ```
 
 **Windows PowerShell:**
 
 ```powershell
 iwr -useb https://raw.githubusercontent.com/demodev-lab/context-engineering/main/install.ps1 | iex
+claude -p /init
+npx rules-converter claude
 ```
 
 ### 수동 설치

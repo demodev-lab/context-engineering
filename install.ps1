@@ -59,29 +59,6 @@ Write-Host "  ✓ PRPs 설치 완료" -ForegroundColor Green
 # Claude 초기화 및 변환
 Write-Host "🔧 설정을 초기화합니다..." -ForegroundColor Magenta
 
-try {
-    $claudeExists = Get-Command claude -ErrorAction SilentlyContinue
-    if ($claudeExists) {
-        claude -p /init | Out-Null
-        Write-Host "  ✓ Claude 초기화 완료" -ForegroundColor Green
-    } else {
-        Write-Host "  ⚠️  claude 명령어를 찾을 수 없습니다. 수동으로 실행해주세요: claude -p /init" -ForegroundColor Yellow
-    }
-} catch {
-    Write-Host "  ⚠️  Claude 초기화 중 오류가 발생했습니다. 수동으로 실행해주세요: claude -p /init" -ForegroundColor Yellow
-}
-
-try {
-    $npxExists = Get-Command npx -ErrorAction SilentlyContinue
-    if ($npxExists) {
-        npx rules-converter claude | Out-Null
-        Write-Host "  ✓ 규칙 변환 완료" -ForegroundColor Green
-    } else {
-        Write-Host "  ⚠️  npx 명령어를 찾을 수 없습니다. Node.js를 설치해주세요." -ForegroundColor Yellow
-    }
-} catch {
-    Write-Host "  ⚠️  규칙 변환 중 오류가 발생했습니다. Node.js가 설치되어 있는지 확인해주세요." -ForegroundColor Yellow
-}
 
 Write-Host ""
 Write-Host "🎉 Context Engineering 설치가 완료되었습니다!" -ForegroundColor Green
