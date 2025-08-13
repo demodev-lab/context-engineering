@@ -35,6 +35,10 @@ git clone https://github.com/demodev-lab/PRPs --quiet
 /bin/rm -rf PRPs/.git
 echo "  ✓ PRPs 설치 완료"
 
+echo "    .mcp.json 다운로드 중..."
+curl -fsSL https://raw.githubusercontent.com/demodev-lab/context-engineering/main/.mcp.json -o .mcp.json
+echo "  ✓ .mcp.json 설치 완료"
+
 echo ""
 echo "Context Engineering 설치가 완료되었습니다!"
 echo ""

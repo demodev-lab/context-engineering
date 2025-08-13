@@ -56,6 +56,10 @@ if (Test-Path "PRPs\.git") {
 }
 Write-Host "  ✓ PRPs 설치 완료" -ForegroundColor Green
 
+Write-Host "  .mcp.json 다운로드 중..." -ForegroundColor Gray
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/demodev-lab/context-engineering/main/.mcp.json -OutFile .mcp.json
+Write-Host "  ✓ .mcp.json 설치 완료" -ForegroundColor Green
+
 Write-Host ""
 Write-Host "Context Engineering 설치가 완료되었습니다!" -ForegroundColor Green
 Write-Host ""

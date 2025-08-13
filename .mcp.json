@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "@21st-dev/magic": {
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest", "API_KEY=\"your_api_key\""]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only",
+        "--project-ref=your_project_ref"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "your_personal_access_token"
+      }
+    },
+    "firebase": {
+      "command": "npx",
+      "args": ["-y", "firebase-tools@latest", "experimental:mcp"]
+    },
+    "notionApi": {
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer your_notion_api_key\", \"Notion-Version\": \"2022-06-28\" }"
+      }
+    },
+    "tosspayments-integration-guide": {
+      "command": "npx",
+      "args": ["-y", "@tosspayments/integration-guide-mcp@latest"]
+    }
+  }
+}
